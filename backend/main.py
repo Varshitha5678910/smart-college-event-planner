@@ -32,7 +32,9 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Or set allow_origins=["*"] during development
+    allow_origins=[
+    "http://localhost:3000",
+    "https://smart-college-event-planner-v7z9.vercel.app"],  # Or set allow_origins=["*"] during development
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
