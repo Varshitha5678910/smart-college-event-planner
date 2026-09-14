@@ -113,12 +113,7 @@ export default function Home() {
 
   const MIN_ATTENDANCE_REQUIRED = 75;
 
-  const fetchEvents = () => {
-    fetch("http://127.0.0.1:8000/events")
-      .then((res) => res.json())
-      .then((data) => setEvents(data))
-      .catch((err) => console.error(err));
-  };
+  const fetchEvents = () => { fetch("https://smart-college-event-planner.onrender.com/events") .then((res) => res.json()) .then((data) => setEvents(data)) .catch((err) => console.error(err)); };
 
   useEffect(() => {
     fetchEvents();
