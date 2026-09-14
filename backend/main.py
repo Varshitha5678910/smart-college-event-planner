@@ -8,8 +8,8 @@ import os
 load_dotenv()
 
 supabase = create_client(
-    os.getenv("SUPABASE_URL"),
-    os.getenv("SUPABASE_KEY")
+    os.getenv("https://oitjraqsuqvkktgeehby.supabase.co"),
+    os.getenv("sb_publishable_hiAnHv-ChjkNCvCvNcUUTg_Z9mITscS")
 )
 
 class Event(BaseModel):
