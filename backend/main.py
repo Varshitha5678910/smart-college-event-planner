@@ -23,14 +23,16 @@ class Event(BaseModel):
 
 app = FastAPI()
 
-origins=[
+# Allow requests from all development origins (localhost, 127.0.0.1, and local IP)
+origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3000",
+    "http://10.10.1.128:3000",
 ]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=origins,  # Or set allow_origins=["*"] during development
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
